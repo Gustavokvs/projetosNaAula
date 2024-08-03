@@ -3,10 +3,12 @@ package br.ulbra.aula4;
 public class Contabilizar {
 
     private int saidas;
+    private String produto;
     private int entradas;
     private int saldo;
 
     public Contabilizar() {
+        this.produto = "Notebook Lenovo";
         this.saidas = 0;
         this.entradas = 0;
         this.saldo = 0;
@@ -29,12 +31,22 @@ public class Contabilizar {
             this.saldo -= saidasDoEstoque;
         } else if (this.saidas < 0 || this.saidas == 0 && this.entradas <= 0) {
             System.out.println("Não é possivel saldo negativo ou nulo");
+        }else if (this.saldo<=0){
+            System.out.println("Não pode");
         }
     }
 
-    public void contarEstoque(int contagemDeEstoque) {
-        contagemDeEstoque = this.entradas - this.saidas;
+    public void contarEstoque() {
+        this.saldo = this.entradas - this.saidas;
 
+    }
+
+    public void setProduto(String nomeDoProduto) {
+        this.produto = nomeDoProduto;
+    }
+
+    public String getProduto() {
+        return produto;
     }
 
     public int getSaidas() {
@@ -51,6 +63,14 @@ public class Contabilizar {
 
     public void setEntradas(int entradas) {
         this.entradas = entradas;
+
+    }
+
+    public void mostrarResultados() {
+        System.out.println("Produto: " + this.produto
+                + "\nEntradas: " + this.entradas
+                + "\nSaidas: " + this.saidas
+                + "\nQuantidade Em Estoque: " + this.saldo);
     }
 
 }
