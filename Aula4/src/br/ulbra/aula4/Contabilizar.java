@@ -31,8 +31,6 @@ public class Contabilizar {
             this.saldo -= saidasDoEstoque;
         } else if (this.saidas < 0 || this.saidas == 0 && this.entradas <= 0) {
             System.out.println("Não é possivel saldo negativo ou nulo");
-        }else if (this.saldo<=0){
-            System.out.println("Não pode");
         }
     }
 
@@ -67,10 +65,13 @@ public class Contabilizar {
     }
 
     public void mostrarResultados() {
-        System.out.println("Produto: " + this.produto
-                + "\nEntradas: " + this.entradas
-                + "\nSaidas: " + this.saidas
-                + "\nQuantidade Em Estoque: " + this.saldo);
+        if (saldo < 0) {
+            System.out.println("Não é possivel o estoque ficar negativado.");
+        } else {
+            System.out.println("Produto: " + this.produto
+                    + "\nEntradas: " + this.entradas
+                    + "\nSaidas: " + this.saidas
+                    + "\nQuantidade Em Estoque: " + this.saldo);
+        }
     }
-
 }
