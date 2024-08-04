@@ -37,7 +37,7 @@ public class Vendedor {
     public void mostrarDados() {
         System.out.println("Nome: " + this.nome
                 + "\nMeta: " + this.meta
-                + "\nTotal Vendido:" + this.totalVendido
+                + "\nTotal Vendido: " + this.totalVendido
                 + "\nComissão: " + calcularComissao());
     }
 
