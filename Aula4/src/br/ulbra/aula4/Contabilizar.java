@@ -14,7 +14,7 @@ public class Contabilizar {
         this.saldo = 0;
     }
 
-    public void entradasEstoque(int entradasNoEstoque) {
+    public void contarEntradasEstoque(int entradasNoEstoque) {
 
         if (this.entradas >= 1) {
             entradasNoEstoque += this.entradas;
@@ -25,7 +25,7 @@ public class Contabilizar {
         }
     }
 
-    public void saidasEstoque(int saidasDoEstoque) {
+    public void contarSaidasEstoque(int saidasDoEstoque) {
         if (this.saidas >= 1) {
             saidasDoEstoque += this.saidas;
             this.saldo -= saidasDoEstoque;
