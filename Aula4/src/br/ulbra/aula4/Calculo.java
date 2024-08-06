@@ -12,7 +12,7 @@ public class Calculo {
         this.perimetro = 0;
         this.areaCirculo = 0;
         this.diametroCirculo = 0;
-       
+
     }
 
     public void calcularPerimetro() {
@@ -40,6 +40,13 @@ public class Calculo {
 
     public double getRaio() {
         return raio;
+    }
+
+    public String mostrarResultado1() {
+        return "Raio: " + this.raio
+                + "\nPerimetro: " + this.perimetro
+                + "\nArea: " + this.areaCirculo
+                + "\nDiametro: " + this.diametroCirculo;
     }
 
     public void mostrarResultado() {
