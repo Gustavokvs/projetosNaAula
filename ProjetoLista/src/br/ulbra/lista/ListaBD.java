@@ -54,4 +54,21 @@ public class ListaBD {
             JOptionPane.showMessageDialog(null, "Alterado com sucesso.");
         }
     }
+
+    public void excluir(int i) {
+
+        if (lista.isEmpty()) {
+
+            JOptionPane.showMessageDialog(null, "Lista vazia");
+
+        } else if (i >= lista.size() || i < 0) {
+
+            JOptionPane.showMessageDialog(null, "Perfume não existe");
+
+        } else {
+            lista.remove(i);
+            JOptionPane.showMessageDialog(null, "Excluido com sucesso.");
+        }
+
+    }
 }

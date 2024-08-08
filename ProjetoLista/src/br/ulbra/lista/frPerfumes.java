@@ -39,6 +39,7 @@ public class frPerfumes extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btmListar = new javax.swing.JButton();
         btmAlterarPerfume = new javax.swing.JButton();
+        btmExcluirPerfume = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,6 +83,13 @@ public class frPerfumes extends javax.swing.JFrame {
             }
         });
 
+        btmExcluirPerfume.setText("REMOVER PERFUIME");
+        btmExcluirPerfume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmExcluirPerfumeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -91,25 +99,27 @@ public class frPerfumes extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(151, 151, 151))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(edtPerfume, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(btmSalvar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(48, 48, 48)
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(edtPerfume, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(28, 28, 28)
+                            .addComponent(btmSalvar))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(61, 61, 61)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(btmListar)
                                     .addGap(18, 18, 18)
-                                    .addComponent(btmAlterarPerfume, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(93, Short.MAX_VALUE))
+                                    .addComponent(btmAlterarPerfume, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btmExcluirPerfume))))))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +138,8 @@ public class frPerfumes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmListar)
-                    .addComponent(btmAlterarPerfume))
+                    .addComponent(btmAlterarPerfume)
+                    .addComponent(btmExcluirPerfume))
                 .addContainerGap(122, Short.MAX_VALUE))
         );
 
@@ -167,9 +178,21 @@ public class frPerfumes extends javax.swing.JFrame {
 
         novoElemento
                 = JOptionPane.showInputDialog("Novo perfume:");
-        bd.alterar((cod-1), novoElemento);
+        bd.alterar((cod - 1), novoElemento);
 
     }//GEN-LAST:event_btmAlterarPerfumePerfumeActionPerformed
+
+    private void btmExcluirPerfumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmExcluirPerfumeActionPerformed
+
+        btmListar.doClick();
+        int cod;
+
+        cod = Integer.parseInt(
+                JOptionPane.showInputDialog("Qual o código?"));
+
+        bd.excluir((cod - 1));
+
+    }//GEN-LAST:event_btmExcluirPerfumeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,6 +231,7 @@ public class frPerfumes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmAlterarPerfume;
+    private javax.swing.JButton btmExcluirPerfume;
     private javax.swing.JButton btmListar;
     private javax.swing.JButton btmSalvar;
     private javax.swing.JTextField edtPerfume;
