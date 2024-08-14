@@ -162,6 +162,7 @@ public class frPerfumes extends javax.swing.JFrame {
         bd.salvar(edtPerfume.getText());
         edtPerfume.setText("");
         edtPerfume.requestFocus();
+        btmListar.doClick();
     }//GEN-LAST:event_btmSalvarActionPerformed
 
     private void btmListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmListarActionPerformed
@@ -176,8 +177,7 @@ public class frPerfumes extends javax.swing.JFrame {
         cod = Integer.parseInt(
                 JOptionPane.showInputDialog("Qual o código?"));
 
-        novoElemento
-                = JOptionPane.showInputDialog("Novo perfume:");
+        novoElemento = JOptionPane.showInputDialog("Novo perfume:");
         bd.alterar((cod - 1), novoElemento);
 
     }//GEN-LAST:event_btmAlterarPerfumePerfumeActionPerformed
