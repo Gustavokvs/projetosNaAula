@@ -219,6 +219,8 @@ public class GerenciadorDeTarefas extends javax.swing.JFrame {
         edtTarefa.setText("");
         edtTarefa.requestFocus();
         btnListar.doClick();
+        
+        
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
@@ -249,14 +251,14 @@ public class GerenciadorDeTarefas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
-        int a =0;
+
         if (obj1.verVazio()) {
             JOptionPane.showMessageDialog(null, "Lista vazia");
         } else {
 
             txtTarefas.setText(obj1.listar());
 
-           txtTotalTarefas.setText("1");
+            txtTotalTarefas.setText(obj1.contabilizarTarefas());
     }//GEN-LAST:event_btnListarActionPerformed
     }
 

@@ -56,9 +56,7 @@ public class Organizar {
                 elementos += (i + 1) + " . " + tarefas.get(i) + "\n";
             }
             return elementos;
-
         }
-
     }
 
     public boolean verVazio() {
@@ -68,4 +66,15 @@ public class Organizar {
         return false;
     }
 
+    public String contabilizarTarefas() {
+       
+        if (tarefas.isEmpty()) {
+            return "Nenhuma Tarefa";
+        } else {
+            return ""+tarefas.size();
+        }
+
+    }
+    
 }
+
