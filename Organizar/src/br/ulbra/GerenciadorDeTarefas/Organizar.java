@@ -37,7 +37,7 @@ public class Organizar {
 
         if (tarefas.isEmpty()) {
             JOptionPane.showMessageDialog(null, "A lista de tarefas está vazia.");
-        } else if (i > tarefas.size() || i < 0) {
+        } else if (i > tarefas.size() || i > 1) {
             JOptionPane.showMessageDialog(null, "Não existe nenhuma tarefa com esse ID");
         } else {
             tarefas.set(i, novoElemento);
@@ -59,6 +59,13 @@ public class Organizar {
 
         }
 
+    }
+
+    public boolean verVazio() {
+        if (tarefas.isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
 }
