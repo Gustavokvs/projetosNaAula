@@ -1,6 +1,7 @@
 package br.ulbra.GerenciadorDeTarefas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JOptionPane;
 
 public class Organizar {
@@ -66,15 +67,23 @@ public class Organizar {
         return false;
     }
 
+    public void ordenar() {
+        Collections.sort(tarefas);
+    }
+
+    public void excluirBase() {
+        tarefas.clear();
+
+    }
+
     public String contabilizarTarefas() {
-       
+
         if (tarefas.isEmpty()) {
             return "Nenhuma Tarefa";
         } else {
-            return ""+tarefas.size();
+            return "" + tarefas.size();
         }
 
     }
-    
-}
 
+}
