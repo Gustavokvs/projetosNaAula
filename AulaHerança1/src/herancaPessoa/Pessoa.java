@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package herancaPessoa;
 
-/**
- *
- * @author Aluno.saolucas
- */
 public class Pessoa {
+
+    protected String nome;
+    protected int idade;
+    protected String sexo;
+
+    public Pessoa(String nome, int idade, String sexo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
+
+    public void cadastrar(String nome, int idade, String sexo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
     
 }

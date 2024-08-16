@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package herancaPessoa;
 
-/**
- *
- * @author Aluno.saolucas
- */
-public class Medico {
-    
+public class Medico extends Pessoa {
+
+    private String crm;
+
+    public Medico(String crm, String nome, int idade, String sexo) {
+
+        super(nome, idade, sexo); //Pegando as informações do construtor do PAI (Pessoa)
+
+        this.crm = crm;
+
+    }
+
+    public void cadastrar(String crm, String nome, int idade, String sexo) {
+        
+        super.cadastrar(nome, idade, sexo); //Está pegando as informações do método pai (cadastrar)
+        this.crm = crm;
+        
+        System.out.println("CRM: " + crm);
+        
+    }
 }

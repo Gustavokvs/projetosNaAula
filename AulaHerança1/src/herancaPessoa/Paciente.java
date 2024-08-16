@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package herancaPessoa;
 
-/**
- *
- * @author Aluno.saolucas
- */
-public class Paciente {
-    
+public class Paciente extends Pessoa {
+
+    private String matricula;
+
+    public Paciente(String matricula, String nome, int idade, String sexo) {
+        super(nome, idade, sexo);
+        this.matricula = matricula;
+    }
+
+    public void cadastrar(String matricula) {
+        super.cadastrar(nome, idade, sexo);
+        this.matricula = matricula;
+        System.out.println("Matricula: " + matricula);
+    }
 }
