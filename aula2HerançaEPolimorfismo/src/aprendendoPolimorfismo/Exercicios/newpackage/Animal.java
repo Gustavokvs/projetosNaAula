@@ -43,9 +43,13 @@ public class Animal {
     }
 
     public void emitirSom() {
+        if (this.tipo.equalsIgnoreCase("ave")) {
+            System.out.println("Piu Piu");
+        } else {
+            System.out.println("O animal está emitindo som");
 
-        System.out.println("O animal está emitindo som");
-
+        }
+        /* PROVISÓRIAMENTE FIZ ASSIM, POÍS NÃO É POSSIVEL SOBRESCREVER NA CLASSE PAI*/
     }
 
 }
