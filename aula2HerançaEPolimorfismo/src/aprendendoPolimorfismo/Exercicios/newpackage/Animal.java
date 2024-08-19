@@ -49,7 +49,10 @@ public class Animal {
             System.out.println("O animal está emitindo som");
 
         }
-        /* PROVISÓRIAMENTE FIZ ASSIM, POÍS NÃO É POSSIVEL SOBRESCREVER NA CLASSE PAI*/
+    }
+        public void brincar(){
+            System.out.println("O/A "+this.nome+" está brincando");            
+        }
     }
 
-}
+

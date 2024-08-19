@@ -4,20 +4,26 @@ public class PetShop {
 
     public static void main(String[] args) {
 
-        Cachorro cac = new Cachorro();
-        Gato gat = new Gato();
+        Cachorro cac = new Cachorro("York", 5, "Aquiles", "Cão");
+        Gato gat = new Gato("Frajola", 8, "Tininha", "Felino");
 
-        System.out.println("O cachorro faz");
         cac.emitirSom();
-        cac.emitirSom("Auff Auff");
         cac.correr();
+        System.out.println("\n");
 
-        System.out.println("\nO Gato faz");
         gat.emitirSom();
         gat.subirEmArvore();
-        gat.setIdade(8);
+
+        System.out.println("Idade do gato antes da caça: " + gat.getIdade());
         gat.cacar();
-        System.out.println("O gato tem "+this.idade);
+        System.out.println("Idade do gato depois da caça: " + gat.getIdade());
+
+        gat.brincar();
+        cac.brincar();
+        System.out.println("A tininha começou a caçar");
+        gat.cacar();
+        System.out.println("Idade da " + gat.getNome() + "; " + gat.getIdade());
+
     }
 
 }

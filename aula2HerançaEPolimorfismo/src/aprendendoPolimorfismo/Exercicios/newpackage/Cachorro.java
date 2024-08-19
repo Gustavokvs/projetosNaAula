@@ -4,6 +4,17 @@ public class Cachorro extends Animal {
 
     protected String raca;
 
+    public Cachorro(String raca) {
+        this.raca = raca;
+    }
+
+    public Cachorro(String raca, int idade, String nome, String tipo) {
+        super(idade, nome, tipo);
+        this.raca = raca;
+    }
+
+    
+    
     public String getRaca() {
         return raca;
     }

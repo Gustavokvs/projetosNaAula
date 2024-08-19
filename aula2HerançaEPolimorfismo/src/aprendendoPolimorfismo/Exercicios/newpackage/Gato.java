@@ -4,6 +4,16 @@ public class Gato extends Animal {
 
     protected String corPelagem;
 
+    public Gato(String corPelagem) {
+        this.corPelagem = corPelagem;
+    }
+
+    public Gato(String corPelagem, int idade, String nome, String tipo) {
+        super(idade, nome, tipo);
+        this.corPelagem = corPelagem;
+    }
+
+    
     public String getCorPelagem() {
         return corPelagem;
     }
@@ -22,6 +32,6 @@ public class Gato extends Animal {
     }
 
     public void cacar() {
-        int idade = this.idade - 1;
+    this.idade -= 1;
     }
 }
