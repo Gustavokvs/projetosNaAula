@@ -1,6 +1,6 @@
 package exercicios;
 
-public class testarImpressora {
+public class TestarImpressora {
 
     public static void main(String[] args) {
         

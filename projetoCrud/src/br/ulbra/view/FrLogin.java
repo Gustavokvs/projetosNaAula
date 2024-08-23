@@ -33,6 +33,8 @@ public class FrLogin extends javax.swing.JFrame {
         lbSenha = new javax.swing.JLabel();
         edtEmail = new javax.swing.JTextField();
         edtSenha = new javax.swing.JTextField();
+        btnEntrar = new javax.swing.JButton();
+        btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +58,12 @@ public class FrLogin extends javax.swing.JFrame {
         jPanel1.add(lbSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
         jPanel1.add(edtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 360, -1));
         jPanel1.add(edtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 360, -1));
+
+        btnEntrar.setText("ENTRAR");
+        jPanel1.add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
+
+        btnFechar.setText("FECHAR");
+        jPanel1.add(btnFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,6 +115,8 @@ public class FrLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEntrar;
+    private javax.swing.JButton btnFechar;
     private javax.swing.JTextField edtEmail;
     private javax.swing.JTextField edtSenha;
     private javax.swing.JPanel jPanel1;
