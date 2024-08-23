@@ -7,7 +7,6 @@ public class TestarDesconto {
 
         des.aplicarDesconto(180.65);
         des.aplicarDesconto(200, 20);
-
     }
 
 }
